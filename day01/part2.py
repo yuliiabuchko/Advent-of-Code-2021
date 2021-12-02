@@ -1,8 +1,8 @@
-import day01
+from day01 import *
 
 
 def solution(file_name):
-    lines = day01.read_lines(file_name)
+    lines = read_lines(file_name)
     counter = 0
     prev_sum = sum(lines[0:3])
     for i in range(3, len(lines)):
@@ -14,6 +14,6 @@ def solution(file_name):
 
 
 if __name__ == '__main__':
-    assert solution(day01.TEST_FILE_NAME) == 5
+    assert solution(TEST_FILE_NAME) == 5
 
-    print(solution(day01.FILE_NAME))
+    print(solution(FILE_NAME))

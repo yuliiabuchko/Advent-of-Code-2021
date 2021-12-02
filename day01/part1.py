@@ -1,8 +1,8 @@
-import day01
+from day01 import *
 
 
 def solution(file_name):
-    lines = day01.read_lines(file_name)
+    lines = read_lines(file_name)
     counter = 0
     for i in range(1, len(lines)):
         if lines[i] > lines[i - 1]:
@@ -11,6 +11,6 @@ def solution(file_name):
 
 
 if __name__ == '__main__':
-    assert solution(day01.TEST_FILE_NAME) == 7
+    assert solution(TEST_FILE_NAME) == 7
 
-    print(solution(day01.FILE_NAME))
+    print(solution(FILE_NAME))
