@@ -1,7 +1,7 @@
 from day02 import *
 
 
-def solution(file_name):
+def solution(file_name: str) -> int:
     lines = read_lines(file_name)
     depth = 0
     horizontal_pos = 0
