@@ -6,8 +6,8 @@ from day03 import *
 def common_filter(bits: list[str], index: int, function: Callable[[int], str]) -> list[str]:
     if index == len(bits[0]) or len(bits) <= 1:
         return bits
-    pos_count = count_pos_bits(bits, index)
-    return common_filter(list(filter(lambda line: line[index] == function(pos_count), bits)), index + 1, function)
+    common_bit = function(count_pos_bits(bits, index))
+    return common_filter(list(filter(lambda line: line[index] == common_bit, bits)), index + 1, function)
 
 
 def most_common_bit(pos_count: int):
