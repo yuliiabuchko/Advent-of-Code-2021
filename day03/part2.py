@@ -1,7 +1,9 @@
+from typing import Callable
+
 from day03 import *
 
 
-def common_filter(bits: list[str], index: int, function) -> list[str]:
+def common_filter(bits: list[str], index: int, function: Callable[[int], str]) -> list[str]:
     if index == len(bits[0]) or len(bits) <= 1:
         return bits
     pos_count = count_pos_bits(bits, index)
