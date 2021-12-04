@@ -2,7 +2,7 @@ from day01 import *
 
 
 def solution(file_name: str) -> int:
-    lines = read_lines(file_name)
+    lines = read_input(file_name)
     counter = 0
     prev_sum = sum(lines[0:3])
     for i in range(3, len(lines)):

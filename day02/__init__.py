@@ -16,7 +16,7 @@ class InputLine:
         self.size = size
 
 
-def read_lines(file_name: str) -> list[InputLine]:
+def read_input(file_name: str) -> list[InputLine]:
     result = []
     with open(file_name) as file:
         for line in file:

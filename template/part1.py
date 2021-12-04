@@ -2,7 +2,7 @@ from template import *
 
 
 def solution(file_name):
-    lines = read_lines(file_name)
+    lines = read_input(file_name)
     # todo: provide solution
 
 

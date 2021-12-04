@@ -22,7 +22,7 @@ def flip_count(bits: str) -> str:
 
 
 def solution(file_name: str) -> int:
-    lines = read_lines(file_name)
+    lines = read_input(file_name)
     positives_count = [0 for _ in range(len(lines[0]))]
     for line in lines:
         for i in range(len(line)):

@@ -33,7 +33,7 @@ def count_pos_bits(bits: list[str], index: int) -> int:
 
 
 def solution(file_name: str) -> int:
-    lines = read_lines(file_name)
+    lines = read_input(file_name)
     oxygen_generator_rating = int(str(common_filter(lines, 0, most_common_bit)[0]), base=2)
     scrubber_rating = int(str(common_filter(lines, 0, least_common_bit)[0]), base=2)
     return oxygen_generator_rating * scrubber_rating
