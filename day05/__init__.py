@@ -21,7 +21,7 @@ class Point:
     def __hash__(self):
         return hash(str(self))
 
-    def len_for_opposite_direction(self):
+    def len_for_opposite_direction(self) -> float:
         return distance(self, Point(0, 1000))
 
 
@@ -75,7 +75,7 @@ class Line:
         return f'{self.start} -> {self.end}'
 
 
-def distance(first: Point, second: Point) -> int:
+def distance(first: Point, second: Point) -> float:
     dist = ((first.x - second.x) ** 2 + (first.y - second.y) ** 2) ** (1 / 2)
     return dist
 
