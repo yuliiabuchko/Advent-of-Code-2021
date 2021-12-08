@@ -10,6 +10,9 @@
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyUnusedLocalInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <scope name="Template" level="INFORMATION" enabled="true" />
+    </inspection_tool>
     <inspection_tool class="SpellCheckingInspection" enabled="true" level="INFORMATION" enabled_by_default="true">
       <scope name="Proofreading" level="TYPO" enabled="true">
         <option name="processCode" value="true" />

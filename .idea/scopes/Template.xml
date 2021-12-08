@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Template" pattern="file[AdventOfCode2021]:template//*" />
+</component>
