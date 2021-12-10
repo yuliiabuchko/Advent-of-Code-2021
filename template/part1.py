@@ -1,7 +1,7 @@
 from template import *
 
 
-def solution(file_name):
+def solution(file_name: str) -> int:
     lines = read_input(file_name)
     # todo: provide solution
 
