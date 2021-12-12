@@ -4,7 +4,7 @@ MAX_POOL_COUNT = 3
 
 
 def count_pool(lava_pool: list[list[int]], i: int, j: int) -> int:
-    if i < 0 or i >= len(lava_pool) or j < 0 or j >= len(lava_pool[0]):
+    if not (0 <= i < len(lava_pool)) or not (0 <= j < len(lava_pool[0])):
         return 0
     if lava_pool[i][j] == 9:
         return 0

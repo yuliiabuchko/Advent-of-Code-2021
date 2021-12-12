@@ -16,7 +16,7 @@ def adjacent(i: int, j: int) -> list[tuple[int, int]]:
     return res
 
 
-def flash(current: list[list[int]], i: int, j: int):
+def flash(current: list[list[int]], i: int, j: int) -> None:
     closest = adjacent(i, j)
     for (i_, j_) in closest:
         if current[i_][j_] == 10:

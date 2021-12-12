@@ -7,13 +7,14 @@ def solution(file_name: str) -> int:
     horizontal_pos = 0
     aim = 0
     for line in lines:
-        if line.direction == Directions.FORWARD:
-            horizontal_pos += line.size
-            depth += aim * line.size
-        elif line.direction == Directions.UP:
-            aim -= line.size
-        elif line.direction == Directions.DOWN:
-            aim += line.size
+        match line.direction:
+            case Directions.FORWARD:
+                horizontal_pos += line.size
+                depth += aim * line.size
+            case Directions.UP:
+                aim -= line.size
+            case Directions.DOWN:
+                aim += line.size
     return depth * horizontal_pos
 
 

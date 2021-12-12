@@ -6,12 +6,13 @@ def solution(file_name: str) -> int:
     depth = 0
     horizontal_pos = 0
     for line in lines:
-        if line.direction == Directions.FORWARD:
-            horizontal_pos += line.size
-        elif line.direction == Directions.UP:
-            depth -= line.size
-        elif line.direction == Directions.DOWN:
-            depth += line.size
+        match line.direction:
+            case Directions.FORWARD:
+                horizontal_pos += line.size
+            case Directions.UP:
+                depth -= line.size
+            case Directions.DOWN:
+                depth += line.size
     return depth * horizontal_pos
 
 

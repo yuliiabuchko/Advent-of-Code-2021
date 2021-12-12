@@ -2,9 +2,9 @@ from day09 import *
 
 
 def is_lover(lava_map: list[list[int]], i: int, j: int, compared_i: int, compared_j: int) -> bool:
-    if compared_i < 0 or compared_j < 0 or compared_i >= len(lava_map) or compared_j >= len(lava_map[0]):
-        return True
-    return lava_map[i][j] < lava_map[compared_i][compared_j]
+    if 0 <= compared_i < len(lava_map) and 0 <= compared_j < len(lava_map[0]):
+        return lava_map[i][j] < lava_map[compared_i][compared_j]
+    return True
 
 
 def count_if_lower(lava_map: list[list[int]], i: int, j: int) -> int:

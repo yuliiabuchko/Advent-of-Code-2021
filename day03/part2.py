@@ -25,10 +25,11 @@ def least_common_bit(pos_count: int):
 def count_pos_bits(bits: list[str], index: int) -> int:
     pos_count = 0
     for line in bits:
-        if line[index] == '1':
-            pos_count += 1
-        elif line[index] == '0':
-            pos_count -= 1
+        match line[index]:
+            case '1':
+                pos_count += 1
+            case '0':
+                pos_count -= 1
     return pos_count
 
 
