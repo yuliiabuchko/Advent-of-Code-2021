@@ -10,21 +10,11 @@ class Node:
         self.visited = False
 
     def is_small(self) -> bool:
-        return self.cave_name.islower() and self.cave_name != 'start' and self.cave_name != 'end'
+        return self.cave_name.islower() and self.cave_name != Graph.start.cave_name \
+               and self.cave_name != Graph.end.cave_name
 
     def is_visited(self) -> bool:
         return self.visited and self.is_small()
-
-    def visit(self) -> None:
-        # if self.is_small() and self.visited:
-        #     raise Exception
-        self.visited = True
-
-    def __str__(self):
-        return self.cave_name
-
-    def __repr__(self):
-        return f'({self.cave_name}, {self.visited})'
 
     def __hash__(self):
         return hash(self.cave_name)
@@ -41,7 +31,7 @@ class Graph:
         self.connections: dict[Node, list[Node]] = {}
 
     def add_connection(self, node_from: Node, node_to: Node):
-        if node_to.cave_name == 'start':
+        if node_to.cave_name == self.start.cave_name or node_from.cave_name == self.end.cave_name:
             return
 
         if node_from not in self.connections:
