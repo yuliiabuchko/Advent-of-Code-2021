@@ -9,7 +9,7 @@ def solution(file_name: str) -> None:
             dot.fold(*fold)
             res.add(dot)
 
-    image = [['.' for _ in range(40)] for _ in range(6)]
+    image = [[' ' for _ in range(40)] for _ in range(6)]
     for dot in res:
         image[dot.y][dot.x] = '#'
     for line in image:
