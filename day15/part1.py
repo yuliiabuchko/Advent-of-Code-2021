@@ -26,13 +26,13 @@ class Graph:
     def __init__(self):
         self.connections: dict[Node, dict[Node, int]] = {}
 
-    def add_connection(self, from_node, to_node, cost):
+    def add_connection(self, from_node: Node, to_node: Node, cost: int):
         if from_node not in self.connections:
             self.connections[from_node] = {}
         self.connections[from_node][to_node] = cost
 
 
-def connect_if_correct(graph: Graph, start: Node, i: int, j: int, levels: list[list[int]]):
+def connect_if_correct(graph: Graph, start: Node, i: int, j: int, levels: list[list[int]]) -> None:
     if 0 <= i < len(levels) and 0 <= j < len(levels[0]):
         graph.add_connection(start, Node(i, j), levels[i][j])
 
@@ -62,7 +62,7 @@ def solve(levels: list[list[int]]) -> int:
     return distances_from_source[Node(len(levels) - 1, len(levels) - 1)]
 
 
-def create_graph(levels):
+def create_graph(levels: list[list[int]]) -> Graph:
     graph = Graph()
     for i in range(len(levels)):
         for j in range(len(levels[0])):

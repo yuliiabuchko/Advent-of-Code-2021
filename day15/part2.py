@@ -12,7 +12,7 @@ def increase(levels: list[list[int]], count: int) -> list[list[int]]:
     return curr
 
 
-def bigger_map(levels: list[list[int]]):
+def bigger_map(levels: list[list[int]]) -> list[list[int]]:
     res = [[] for _ in range(len(levels) * 5)]
     for k in range(5):
         increased = increase(levels, k)
