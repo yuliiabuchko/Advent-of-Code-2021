@@ -29,4 +29,3 @@ def read_input(file_name: str) -> list[InputLine]:
             z_start, z_end = map(int, z_range.split(".."))
             res.append(InputLine(status == "on", x_start, x_end, y_start, y_end, z_start, z_end))
     return res
-
