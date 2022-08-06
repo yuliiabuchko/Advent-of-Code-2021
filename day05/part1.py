@@ -1,4 +1,4 @@
-from typing import Callable, Optional
+from typing import Callable
 
 from day05 import *
 
@@ -7,7 +7,7 @@ def in_different_segments(a: Point, b: Point, c: Point, d: Point, first: Line, s
     return a in first and b in first and c in second and d in second
 
 
-def get_common_line(first: Line, second: Line) -> Optional[Line]:
+def get_common_line(first: Line, second: Line) -> Line or None:
     a, b, c, d = sorted([first.start, first.end, second.start, second.end],
                         key=None if first.direction() else Point.len_for_opposite_direction)
     if in_different_segments(a, b, c, d, first, second) or in_different_segments(a, b, c, d, second, first):

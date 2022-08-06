@@ -1,5 +1,3 @@
-from typing import Optional
-
 FILE_NAME: str = 'input.txt'
 TEST_FILE_NAME: str = 'test_input.txt'
 
@@ -8,7 +6,7 @@ BOARD_SIZE: int = 5
 
 class Board:
     def __init__(self, board: list[list[int]]):
-        self._board: list[list[Optional[int]]] = board
+        self._board: list[list[int or None]] = board
 
     def __str__(self):
         return str(self._board)

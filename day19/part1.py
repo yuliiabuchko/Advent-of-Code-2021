@@ -1,5 +1,4 @@
 from collections import defaultdict
-from typing import Optional
 
 from day19 import *
 
@@ -8,7 +7,7 @@ def distance(first: Probe, second: Probe) -> Probe:
     return Probe(first.x - second.x, first.y - second.y, first.z - second.z, False)
 
 
-def normalize_direction(normalized: Scanner, denormalized: Scanner) -> Optional[Scanner]:
+def normalize_direction(normalized: Scanner, denormalized: Scanner) -> Scanner or None:
     distances: dict[Probe, int] = defaultdict(int)
 
     for normalized_probe in normalized.probes:

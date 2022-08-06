@@ -1,5 +1,3 @@
-from typing import Optional
-
 from day18 import *
 
 
@@ -35,7 +33,7 @@ def can_split(number: Number) -> bool:
 
 
 def split(number: Number) -> Number:
-    def number_to_split(num: Number) -> Optional[int]:
+    def number_to_split(num: Number) -> int or None:
         if isinstance(num, int):
             if num >= 10:
                 return num
@@ -52,7 +50,7 @@ def split(number: Number) -> Number:
 
 
 def explode(number: Number) -> Number:
-    def explode_helper(num: Number, curr_height: int) -> Optional[Number]:
+    def explode_helper(num: Number, curr_height: int) -> Number or None:
         if curr_height > 3:
             if not isinstance(num, int):
                 return num

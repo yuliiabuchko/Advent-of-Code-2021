@@ -1,10 +1,8 @@
-from typing import Optional
-
 from day16 import *
 from day16.part1 import get_type_id
 
 
-def count(decoded: str) -> tuple[Optional[int], Optional[int]]:
+def count(decoded: str) -> tuple[int or None, int or None]:
     if len(decoded) < 11:
         return None, None
 

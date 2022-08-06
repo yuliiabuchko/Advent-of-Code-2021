@@ -1,5 +1,3 @@
-from typing import Optional
-
 from day10 import *
 
 SCORE_ILLEGAL = {
@@ -10,7 +8,7 @@ SCORE_ILLEGAL = {
 }
 
 
-def get_first_illegal_char(line: list[str]) -> Optional[chr]:
+def get_first_illegal_char(line: list[str]) -> chr or None:
     stack = []
     for c in line:
         if c in CHUNKS_MAPPING:
